@@ -1,0 +1,128 @@
+
+.regular-card {
+    width: 100%;
+    border-radius: 1.6rem;
+    background-repeat: no-repeat;
+    background-position: 92% -1rem;
+
+    .property-card {
+        position: relative;
+        background-color: $neutral2;
+        margin-top: 4rem;
+        border-radius: 1.6rem;
+        padding: 2.5rem;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.8rem;
+
+        &:hover {
+            background-color: $card-hover;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+
+            .title {
+                color: #fff;
+                font-size: 1.8rem;
+                font-weight: 500;
+                z-index: 98;
+            }
+
+            .points {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &:hover {
+                    .point {
+                        background-color: #fff;
+
+                    }
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    border-radius: 1.6rem;
+                    display: none;
+                    z-index: 1;
+                }
+
+                &:hover::before {
+                    background-color: $neutral2;
+                    display: block;
+                    cursor: pointer;
+                }
+
+                .point {
+                    background-color: $neutral4;
+                    width: 0.4rem;
+                    height: 0.4rem;
+                    border-radius: 50%;
+                    margin: 0.2rem;
+                    z-index: 99;
+                }
+            }
+        }
+
+        .row-2 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            z-index: 97;
+
+            .hours {
+                color: #fff;
+                font-size: 3rem;
+                font-weight: 300;
+            }
+
+            .description {
+                color: $neutral4;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+.work {
+    background-color: $orange;
+    background-image: url(../../images/icon-work.svg);
+}
+
+.play {
+    background-color: $cyan;
+    background-image: url(../../images/icon-play.svg);
+}
+
+.study {
+    background-color: $red;
+    background-image: url(../../images/icon-study.svg);
+}
+
+.exercise {
+    background-color: $green;
+    background-image: url(../../images/icon-exercise.svg);
+}
+
+.social {
+    background-color: $purple;
+    background-image: url(../../images/icon-social.svg);
+}
+
+.selfcare {
+    background-color: $yellow;
+    background-image: url(../../images/icon-self-care.svg);
+}
